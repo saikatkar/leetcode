@@ -8,7 +8,6 @@ class Solution {
             for (int j = 0; j < grid[0].length; j++) {
                 if (grid[i][j] == 1 && !visited[i][j]) {
                     dfs (visited, grid, i, j);
-                    //System.out.println(size);
                     maxSize = Math.max(maxSize, size);
                     size = 0;
                 }
