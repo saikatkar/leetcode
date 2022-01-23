@@ -14,7 +14,7 @@ class Solution {
                 }
                 max = Math.max(max, grid[i][j]);
             }
-            System.out.println(max);
+            //System.out.println(max);
             result += max;
             j = 0;
         }
@@ -26,7 +26,7 @@ class Solution {
             for (; j < m; j++) {
                 max = Math.max(max, grid[j][i]);
             }
-            System.out.println(max);
+            //System.out.println(max);
             result += max;
             j = 0;
         }
