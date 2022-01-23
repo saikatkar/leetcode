@@ -24,8 +24,6 @@ class Solution {
             colMax[j] = max;
         }
         
-        System.out.println(Arrays.toString(rowMax));
-        System.out.println(Arrays.toString(colMax));
         int result = 0;
         for (i = 0; i < grid.length; i++) {
             for (j = 0; j < grid[0].length; j++) {
