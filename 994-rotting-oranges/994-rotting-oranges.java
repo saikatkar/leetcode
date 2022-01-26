@@ -37,9 +37,6 @@ class Solution {
                     }
                 }
             }
-            System.out.println("******* " + minutes + " ********");
-            System.out.println("###### " + queue.size() + " ######");
-            
         }
         if (count == totalFresh) {
             return minutes-1;
