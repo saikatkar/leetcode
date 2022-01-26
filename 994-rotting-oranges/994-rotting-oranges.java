@@ -23,7 +23,6 @@ class Solution {
             minutes ++;
             while (size -- > 0) {
                 int [] arr = queue.poll();
-                System.out.println(Arrays.toString(arr));
                 for (int i = 0; i < directions.length; i++) {
                     int x = arr[0] + directions[i][0];
                     int y = arr[1] + directions[i][1];
