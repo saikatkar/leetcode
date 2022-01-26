@@ -12,8 +12,6 @@ class Solution {
             int size = queue.size();
             while (size -- > 0) {
                 int [] arr = queue.poll();
-                //visited[arr[0]][arr[1]] = true;
-                //System.out.println(Arrays.toString(arr));
                 result[k++] = arr;
                 for (int i = 0; i < directions.length; i++) {
                     int x = arr[0] + directions[i][0];
