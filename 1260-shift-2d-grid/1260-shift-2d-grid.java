@@ -20,7 +20,7 @@ class Solution {
             for (int j = 0; j < n; j++) {
                 list1.add(list.get(i+j));
             }
-        result.add(list1);
+            result.add(list1);
         }
         return result;
     }
