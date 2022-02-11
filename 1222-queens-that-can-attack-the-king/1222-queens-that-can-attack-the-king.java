@@ -1,6 +1,5 @@
 class Solution {
     public List<List<Integer>> queensAttacktheKing(int[][] queens, int[] king) {
-        int [][] directions = new int[][]{{0, 1}, {1, 0}, {0, -1}, {-1, 0}, {1, 1}, {-1, -1}, {1, -1}, {-1, 1}};
         int x = king[0];
         int y = king[1];
         int [][] isQueen = new int[8][8];
