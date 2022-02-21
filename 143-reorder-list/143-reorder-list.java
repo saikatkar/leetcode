@@ -20,13 +20,11 @@ class Solution {
         ListNode newHead = slow.next;
         slow.next = null;
         ListNode rev = reverse(newHead);
-        //System.out.println(rev.val);
         ListNode rev1 = rev;
         ListNode temp = head;
         while (rev1 != null) {
             rev = rev1;
             rev1 = rev1.next;
-            //System.out.println(rev.val);
             rev.next = temp.next;
             temp.next = rev;
             temp = temp.next.next;
