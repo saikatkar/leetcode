@@ -14,9 +14,7 @@ class Solution {
             return head;
         }
         ListNode temp = head;
-        ListNode preTemp = null;
         ListNode kTemp = head;
-        ListNode preKTemp = null;
         int len = 0;
         while (temp != null) {
             temp = temp.next;
@@ -25,13 +23,11 @@ class Solution {
         int i = 1;
         temp = head;
         while (i < k ) {
-            preTemp = temp;
             temp = temp.next;
             i++;
         }
         i = 1;
         while (i < len-k+1) {
-            preKTemp = kTemp;
             kTemp = kTemp.next;
             i++;
         }
