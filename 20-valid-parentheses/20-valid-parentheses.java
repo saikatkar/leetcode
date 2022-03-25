@@ -1,8 +1,9 @@
 class Solution {
     public boolean isValid(String s) {
+        char arr[] = s.toCharArray();
         Stack<Character> stack = new Stack<>();
-        for (int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(i);
+        for (int i = 0; i < arr.length; i++) {
+            char ch = arr[i];
             if (ch == '(' || ch == '{' || ch == '[') {
                 stack.push(ch);
             }
