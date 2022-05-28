@@ -8,12 +8,10 @@ class Solution {
         }
         result.add(indx);
         int nxtIndx = indx+1;
-        System.out.println(nxtIndx);
         while (nxtIndx < nums.length && nums[nxtIndx] == target) {
             result.add(nxtIndx++);
         }
         int prevIndx = indx-1;
-        System.out.println(prevIndx);
         while (prevIndx >= 0 && nums[prevIndx] == target) {
             result.add(prevIndx--);
         }
