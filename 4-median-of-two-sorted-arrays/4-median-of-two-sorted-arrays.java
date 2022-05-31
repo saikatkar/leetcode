@@ -12,8 +12,8 @@ class Solution {
         while (l1 <= h1) {
             int m1 = l1 + (h1-l1)/2;
             int m2 = total - m1;
-            System.out.println(m1);
-            System.out.println(m2);
+            //System.out.println(m1);
+            //System.out.println(m2);
             
             int maxLeft1 = m1 == 0 ? Integer.MIN_VALUE : nums1[m1-1];
             int maxLeft2 = m2 == 0 ? Integer.MIN_VALUE : nums2[m2-1];
