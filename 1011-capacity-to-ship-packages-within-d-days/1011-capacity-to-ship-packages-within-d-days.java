@@ -30,13 +30,9 @@ class Solution {
             if (sum > capacity) {
                 count++;
                 sum = weights[i];
-                // System.out.println("sum " + sum);
-                // System.out.println(count);
             }
         }
         count++;
-        // System.out.println(capacity);
-        // System.out.println(count);
         return count <= days;
     }
 }
