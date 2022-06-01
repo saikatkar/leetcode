@@ -1,10 +1,10 @@
 class Solution {
     public int shipWithinDays(int[] weights, int days) {
-        int low = Integer.MAX_VALUE;
+        int low = 0;
         int high = 0;
         for (int w : weights) {
             high += w;
-            low = Math.min(low, w);
+            low = Math.max(low, w);
         }
         
         while (low <= high) {
