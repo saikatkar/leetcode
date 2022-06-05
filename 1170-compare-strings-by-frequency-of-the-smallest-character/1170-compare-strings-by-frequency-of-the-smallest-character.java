@@ -10,24 +10,19 @@ class Solution {
         }
         Arrays.sort(wf);
         int[] result = new int[queries.length];
-         //System.out.println(Arrays.toString(qf));
-         //System.out.println(Arrays.toString(wf));
         for (int i = 0; i < qf.length; i++) {
             
             int idx = search(wf, qf[i]);
-            //System.out.println(idx);
             result[i] = wf.length-idx;
         }
         return result;
     }
     
     private int search (int [] wf, int target) {
-        //System.out.println(target);
         int low = 0;
         int high = wf.length;
         while (low < high) {
             int mid = low + (high - low)/2;
-            //System.out.println(mid);
             if (wf[mid] <= target) {
                 low = mid+1;
             } else {
