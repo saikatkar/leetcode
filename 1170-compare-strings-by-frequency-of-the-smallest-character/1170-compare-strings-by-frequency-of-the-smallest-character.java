@@ -10,8 +10,8 @@ class Solution {
         }
         Arrays.sort(wf);
         int[] result = new int[queries.length];
-         System.out.println(Arrays.toString(qf));
-         System.out.println(Arrays.toString(wf));
+         //System.out.println(Arrays.toString(qf));
+         //System.out.println(Arrays.toString(wf));
         for (int i = 0; i < qf.length; i++) {
             
             int idx = search(wf, qf[i]);
