@@ -5,7 +5,7 @@ class Solution {
         Map<Integer, List<Integer>> udag = createUDAG(connections);
         boolean [] visited = new boolean[n];
        //System.out.println(dag);
-        System.out.println(udag);
+        //System.out.println(udag);
         dfs (udag, visited, 0);
         return count;
     }
@@ -14,7 +14,7 @@ class Solution {
     {
         visited[v] = true;
         //System.out.println(p);
-        System.out.println(v);
+        //System.out.println(v);
         for (int i : udag.get(v)) {
             if (!visited[Math.abs(i)]) {
                 if (i > 0) {
