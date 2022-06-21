@@ -1,11 +1,8 @@
 class Solution {
     int count = 0;
     public int minReorder(int n, int[][] connections) {
-       // Map<Integer, List<Integer>> dag = createDAG(connections);
         Map<Integer, List<Integer>> udag = createUDAG(connections);
         boolean [] visited = new boolean[n];
-       //System.out.println(dag);
-        //System.out.println(udag);
         dfs (udag, visited, 0);
         return count;
     }
@@ -13,8 +10,6 @@ class Solution {
     private void dfs (Map<Integer, List<Integer>> udag, boolean[] visited, int v)
     {
         visited[v] = true;
-        //System.out.println(p);
-        //System.out.println(v);
         for (int i : udag.get(v)) {
             if (!visited[Math.abs(i)]) {
                 if (i > 0) {
@@ -24,21 +19,6 @@ class Solution {
             }
         }
     }
-    
-//     private Map<Integer, List<Integer>> createDAG (int[][] connections) 
-//     {
-//         Map<Integer, List<Integer>> dag = new HashMap<>();
-//         for (int[] edge : connections) {
-//             if (!dag.containsKey(edge[0])) {
-//                 List<Integer> list = new ArrayList<>();
-//                 list.add(edge[1]);
-//                 dag.put(edge[0], list);
-//             } else {
-//                 dag.get(edge[0]).add(edge[1]);
-//             }
-//         }
-//         return dag;
-//     }
     
     private Map<Integer, List<Integer>> createUDAG (int[][] connections) 
     {
