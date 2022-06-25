@@ -1,12 +1,5 @@
 class Solution {
     public List<Integer> eventualSafeNodes(int[][] graph) {
-        // Set<Integer> terminal = new HashSet<>();
-        // for (int i = 0; i < graph.length; i++) {
-        //     int [] edge = graph[i];
-        //     if (edge.length == 0) {
-        //         terminal.add(i);
-        //     }    
-        // }
         boolean [] recStack = new boolean[graph.length];
         boolean [] visited = new boolean[graph.length];
         List<Integer> result = new ArrayList<>();
@@ -14,10 +7,8 @@ class Solution {
             if (dfs(graph, i, result, recStack, visited)) {
                 result.add(i);
             }
-            // Arrays.fill(recStack, false);
-            // Arrays.fill(visited, false);
         }
-        Collections.sort(result);
+        //Collections.sort(result);
         return result; 
     }
     
