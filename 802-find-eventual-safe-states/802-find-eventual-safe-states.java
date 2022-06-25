@@ -14,8 +14,8 @@ class Solution {
             if (dfs(graph, i, result, recStack, visited)) {
                 result.add(i);
             }
-            Arrays.fill(recStack, false);
-            Arrays.fill(visited, false);
+            // Arrays.fill(recStack, false);
+            // Arrays.fill(visited, false);
         }
         Collections.sort(result);
         return result; 
