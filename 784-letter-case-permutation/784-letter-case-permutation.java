@@ -20,7 +20,7 @@ class Solution {
                 sArr[i] = ch;
             } else {
                 sArr[i] = (char)(ch - 32);
-                generate(sArr, j+1);
+                generate(sArr, i+1);
                 sArr[i] = ch;
             }
         }
