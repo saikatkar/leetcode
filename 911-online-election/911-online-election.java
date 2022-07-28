@@ -11,10 +11,6 @@ class TopVotedCandidate {
             if (totalVote[persons[i]] >= totalVote[lastLeader]) {
                 newLeader = persons[i];
             }
-            // int maxVoteCandidate = findMax(totalVote);
-            // if (totalVote[maxVoteCandidate] == totalVote[persons[i]]) {
-            //    maxVoteCandidate = persons[i]; 
-            // }
             map.put(times[i], newLeader);
             lastLeader = newLeader;
         }
@@ -25,19 +21,6 @@ class TopVotedCandidate {
         int time = binarySearch(times, 0, times.length-1, t);
         //System.out.println(time);
         return map.get(times[time]);
-    }
-    
-    private int findMax (int [] totalVote)
-    {
-        int max = 0;
-        int maxIndex = 0;
-        for (int i = 0; i < totalVote.length; i++) {
-            if (totalVote[i] >= max) {
-                max = totalVote[i];
-                maxIndex = i;
-            }
-        }
-        return maxIndex;
     }
     
     private int binarySearch (int [] times, int low, int high, int t)
