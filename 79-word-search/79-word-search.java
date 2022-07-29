@@ -18,16 +18,18 @@ class Solution {
     private boolean dfs (char[][] board, int i, int j,
                          boolean [][] visited, char[] word, int k)
     {
+        if (k > word.length-1) {
+            return true;
+        }
+        
         if (i < 0 || i > board.length-1 || j < 0 || j > board[0].length-1 ||
             visited[i][j]) {
             return false;
         }
-        if (k > word.length-1) {
-            return false;
-        }
-        if (k == word.length-1 && word[k] == board[i][j]) {
-            return true;
-        }
+        
+        // if (k == word.length-1 && word[k] == board[i][j]) {
+        //     return true;
+        // }
         if (word[k] != board[i][j]) {
             return false;
         }
