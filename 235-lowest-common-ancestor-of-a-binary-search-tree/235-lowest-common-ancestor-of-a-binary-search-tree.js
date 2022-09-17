@@ -14,16 +14,13 @@
  */
 var lowestCommonAncestor = function(root, p, q) {
     if(root && (root.val<q.val && p.val<root.val)||(root.val<p.val && q.val<root.val)){
-        // console.log(root.val)
         return root;
     }
     else if(root && root.val==q.val || p.val==root.val){
-        // console.log(root.val)
         return root;
     }
     else if(root && root.val>p.val && root.val>q.val){
         if(root.left){
-        // console.log(root.left.val)
        return lowestCommonAncestor(root.left,p,q);
         }
     }
