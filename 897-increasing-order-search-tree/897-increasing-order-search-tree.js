@@ -15,12 +15,10 @@ var increasingBST = function(root) {
     let rootNode=new TreeNode(arr[0],null,null)
     root=rootNode;
     for(let i=1;i<arr.length;i++){
-        if(arr[i]>arr[i-1]){
             rootNode.left=null;
             let r=new TreeNode(arr[i],null,null);
             rootNode.right=r;
             rootNode=rootNode.right
-        }
     }
    return root;
 };
