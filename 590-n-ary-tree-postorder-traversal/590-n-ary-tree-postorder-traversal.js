@@ -12,15 +12,11 @@
  */
 var postorder = function(root) {
     let result=[]
-    return postOrdTraversal(root,result)
-};
-
-function postOrdTraversal(root,result){
     if(!root)
-        return [];
+        return result;
     if(root.children.length){
         root.children.forEach(child=>{
-         postOrdTraversal(child,result);
+         result.push(...postorder(child));
         })
     }
     if(root)
