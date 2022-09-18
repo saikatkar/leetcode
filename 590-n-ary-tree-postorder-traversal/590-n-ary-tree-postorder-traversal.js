@@ -1,41 +1,29 @@
-/*
-// Definition for a Node.
-class Node {
-    public int val;
-    public List<Node> children;
+/**
+ * // Definition for a Node.
+ * function Node(val,children) {
+ *    this.val = val;
+ *    this.children = children;
+ * };
+ */
 
-    public Node() {}
-
-    public Node(int _val) {
-        val = _val;
-    }
-
-    public Node(int _val, List<Node> _children) {
-        val = _val;
-        children = _children;
-    }
+/**
+ * @param {Node|null} root
+ * @return {number[]}
+ */
+var postorder = function(root) {
+    let result=[]
+    return postOrdTraversal(root,result)
 };
-*/
 
-class Solution {
-    List<Integer> result = new ArrayList<>();
-    public List<Integer> postorder(Node root) {
-       if (root == null) {
-           return result;
-       } 
-       traverse(root);
-       result.add(root.val); 
-       return result;
+function postOrdTraversal(root,result){
+    if(!root)
+        return [];
+    if(root.children.length){
+        root.children.forEach(child=>{
+         postOrdTraversal(child,result);
+        })
     }
-    
-    private void traverse (Node root)
-    {
-        if (root == null) {
-            return;
-        }
-        for (Node n : root.children) {
-            traverse(n);
-            result.add(n.val);
-        }
-    }
+    if(root)
+      result.push(root.val)
+    return result;
 }
